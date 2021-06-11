@@ -1,0 +1,24 @@
+## install powerline with the following command:
+## > pip install --user git+git://github.com/Lokaltog/powerline 
+##
+## add the following lines to ~/.bashrc
+## if [ -f ~/.bashrc_powerline ]; then
+##     . ~/.bashrc_powerline
+## fi
+## 
+
+function show_powerline_status(){
+  USR_HOME=~/.local
+  PYTHON=python3.8
+  POWERLINE_DIR=$USR_HOME/lib/$PYTHON/site-packages/powerline
+
+  if [ -f $USR_HOME/bin/powerline-daemon ]; then
+    powerline-daemon -q
+  fi
+  if [ -f $POWERLINE_DIR/bindings/bash/powerline.sh ]; then
+    . $POWERLINE_DIR/bindings/bash/powerline.sh
+  fi
+}
+
+show_powerline_status
+
