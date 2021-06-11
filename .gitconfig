@@ -1,0 +1,19 @@
+[http]
+	sslVerify = false
+[user]
+	email = maxime.labelle@chanel.com
+	name = Maxime Labelle
+[alias]
+	lol = log --oneline --graph --decorate
+[color "branch"]
+  current = blue
+  local = normal
+  remote = red
+  plain = normal
+[color "status"]
+  header = normal
+  added = red
+  updated = cyan
+  changed = red
+  untracked = red
+  nobranch = red
