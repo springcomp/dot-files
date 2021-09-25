@@ -1,4 +1,11 @@
-\.bash_logout
-\.bashrc
+\.local/
+\.nvm/
 \.profile
 \.ssh/
+
+\.bash_history
+\.bash_logout
+\.bashrc
+\.python_history
+\.viminfo
+\.wget-hsts
