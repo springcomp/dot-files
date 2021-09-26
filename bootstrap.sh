@@ -15,9 +15,6 @@ cat << EOF >> ~/.bashrc
 
 export PATH=~/.local/bin:\$PATH
 
-if [ -f ~/.bashrc_nodejs ]; then
-    . ~/.bashrc_nodejs
-fi
 if [ -f ~/.bashrc_powerline ]; then
     . ~/.bashrc_powerline
 fi
