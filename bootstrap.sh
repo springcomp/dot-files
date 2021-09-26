@@ -8,6 +8,8 @@ pip install --user git+git://github.com/Lokaltog/powerline
 
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
+git clone git@github.com:christoomey/vim-tmux-navigator.git ~/.vim/pack/plugins/start/vim-tmux-navigator
+
 ## load custom ~/.bashrc_xxx scripts
 ##
 
