@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## install dependencies
+## ====================
 
 sudo apt-get update
 sudo apt-get install python3 python3-pip -y
@@ -10,10 +11,10 @@ pip install --user powerline-gitstatus
 
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
-git clone git@github.com:christoomey/vim-tmux-navigator.git ~/.vim/pack/plugins/start/vim-tmux-navigator
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ## load custom ~/.bashrc_xxx scripts
-##
+## =================================
 
 cat << EOF >> ~/.bashrc
 
@@ -29,6 +30,7 @@ fi
 EOF
 
 ## reload
+## ======
 
 . .bashrc
 
