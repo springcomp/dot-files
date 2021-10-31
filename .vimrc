@@ -10,8 +10,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'phanviet/vim-monokai-pro' 
+Plugin     'Yggdroot/indentLine'
+Plugin     'phanviet/vim-monokai-pro' 
+Plugin  'christoomey/vim-tmux-navigator'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -51,6 +52,12 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Yggdroot/indentline
+" ======================= 
+
+let g:indentLine_enabled = 0
+let g:indentLine_char = '|'
+
 set number
 set relativenumber
 
@@ -83,3 +90,6 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the status 
 colorscheme monokai_pro
 
 autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd Filetype yaml let g:indentLine_enabled=1
+autocmd Filetype yaml set foldmethod=indent
+autocmd Filetype yaml set foldlevel=20
