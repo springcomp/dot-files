@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin     'Yggdroot/indentLine'
 Plugin     'phanviet/vim-monokai-pro' 
 Plugin  'christoomey/vim-tmux-navigator'
+Plugin     'pedrohdz/vim-yaml-folds'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -39,7 +40,8 @@ Plugin  'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin on           " required
+filetype indent on           " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -58,17 +60,31 @@ filetype plugin indent on    " required
 let g:indentLine_enabled = 0
 let g:indentLine_char = '|'
 
+set noswapfile
+set nobackup
+set nowritebackup
+
 set number
 set relativenumber
 
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 
 set shiftwidth=4
 set tabstop=4
 set expandtab
+set smarttab
+set autoindent
+
+set foldmethod=syntax
+set foldlevelstart=99
+set foldenable
 
 "nnoremap <Esc> :nohl<CR>
+
+inoremap jk <esc>
 
 nnoremap + $
 nnoremap ’ _
@@ -88,8 +104,3 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the status 
 " ======================= 
 
 colorscheme monokai_pro
-
-autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2 expandtab
-autocmd Filetype yaml let g:indentLine_enabled=1
-autocmd Filetype yaml set foldmethod=indent
-autocmd Filetype yaml set foldlevel=20
