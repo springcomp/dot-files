@@ -16,14 +16,21 @@
         {
           "type": "path",
           "style": "diamond",
+          "trailing_diamond": "\uE0B0",
           "foreground": "#ffffff",
           "background": "#585858",
-          "trailing_diamond": "\uE0B0",
           "properties": {
             "prefix": "<#0087af>\uE0B0</> ",
             "folder_separator_icon": " <#808080>\uE0B1</> ",
             "style": "agnoster_full"
           }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#ff6a00"
         }
       ]
     }
