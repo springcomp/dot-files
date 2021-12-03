@@ -1,8 +1,8 @@
 [http]
 	sslVerify = false
 [user]
-	email = maxime.labelle@chanel.com
-	name = Maxime Labelle
+	email = springcomp@users.noreply.github.com
+	name = Springcomp
 [alias]
 	lol = log --oneline --graph --decorate
 [color "branch"]
