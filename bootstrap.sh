@@ -6,7 +6,7 @@
 sudo apt-get update
 sudo apt-get install python3 python3-pip -y
 sudo ln -s /usr/bin/pip3 /usr/local/bin/pip
-pip install --user git+git://github.com/Lokaltog/powerline
+pip install --user git+ssh://git@github.com/Lokaltog/powerline
 pip install --user powerline-gitstatus
 
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
