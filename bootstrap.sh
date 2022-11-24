@@ -3,7 +3,7 @@
 ## install dependencies
 ## ====================
 
-if [[ $CODESPACES != "true" ]];
+if [[ "$CODESPACES" != "true" ]];
 then
 
     sudo apt-get update
@@ -21,6 +21,7 @@ pip install --user git+https://git@github.com/powerline/powerline
 pip install --user powerline-gitstatus
 
 [[ -d ~/.vim/bundle/Vundle.vim ]] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +'PluginInstall --sync' +qa
 
 ## load custom ~/.bashrc_xxx scripts
 ## =================================
@@ -40,5 +41,19 @@ EOF
 
 ## reload
 ## ======
+
+if [[ "$CODESPACES" == "true" ]];
+then
+
+  rsync -av \
+    --exclude='.git' \
+    --exclude='.gitmodules' \
+    --exclude='.gitignore' \
+    --exclude='.poshthemes' \
+    --exclude='README.md' \
+    /workspaces/.codespaces/.persistedshare/dotfiles/ \
+    ~/
+
+fi
 
 . ~/.bashrc

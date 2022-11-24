@@ -9,7 +9,7 @@
 
 function show_powerline_status(){
   USR_HOME=~/.local
-  PYTHON=python3.8
+  PYTHON=python3.10
   POWERLINE_DIR=$USR_HOME/lib/$PYTHON/site-packages/powerline
 
   if [ -f $USR_HOME/bin/powerline-daemon ]; then
@@ -21,4 +21,3 @@ function show_powerline_status(){
 }
 
 show_powerline_status
-
