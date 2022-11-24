@@ -21,7 +21,9 @@ pip install --user git+https://git@github.com/powerline/powerline
 pip install --user powerline-gitstatus
 
 [[ -d ~/.vim/bundle/Vundle.vim ]] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +'PluginInstall --sync' +qa
+[[ -d ~/.vim/bundle/vim-monokai-pro ]] || git clone https://github.com/phanviet/vim-monokai-pro.git ~/.vim/bundle/vim-monokai-pro
+
+vim +PluginInstall +qa
 
 ## load custom ~/.bashrc_xxx scripts
 ## =================================
