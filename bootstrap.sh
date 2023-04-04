@@ -40,7 +40,7 @@ extensions=("powerline" "python" "vim")
 for extension in "${extensions[@]}"
 do
   if [ -f ~/.bashrc_$extension ]; then
-    source ~/.bashrc_$extension
+    . ~/.bashrc_$extension
   fi
 done
 
