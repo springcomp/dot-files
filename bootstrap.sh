@@ -36,12 +36,13 @@ cat << EOF >> ~/.bashrc
 
 export PATH=~/.local/bin:\$PATH
 
-if [ -f ~/.bashrc_powerline ]; then
-    . ~/.bashrc_powerline
-fi
-if [ -f ~/.bashrc_vim ]; then
-    . ~/.bashrc_vim
-fi
+extensions=("powerline" "python" "vim")
+for extension in "${extensions[@]}"
+do
+  if [ -f ~/.bashrc_$extension ]; then
+    source ~/.bashrc_$extension
+  fi
+done
 
 EOF
 
