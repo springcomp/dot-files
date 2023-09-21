@@ -4,6 +4,12 @@ This repository contains my private *dotfile* configurations.
 
 ## Setup
 
+Create and register a SSH public key on GitHub
+
+```bash
+ssh-keygen
+```
+
 Clone this repository into your HOME `~` directory:
 
 ```bash
