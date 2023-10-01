@@ -92,6 +92,18 @@ nnoremap ’ _
 vnoremap + $
 vnoremap ’ _
 
+" Simplify navigating help
+" https://vim.fandom.com/wiki/Learn_to_use_help
+" =============================================
+
+nnoremap <S-F1>  :cc<CR>
+nnoremap <F2>    :cnext<CR>
+nnoremap <S-F2>  :cprev<CR>
+nnoremap <F3>    :cnfile<CR>
+nnoremap <S-F3>  :cpfile<CR>
+nnoremap <F4>    :cfirst<CR>
+nnoremap <S-F4>  :clast<CR>
+
 " Powerline Status
 " ======================= 
 
