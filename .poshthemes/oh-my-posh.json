@@ -1,39 +1,57 @@
 {
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
-      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "type": "session",
-          "style": "plain",
-          "foreground": "#ffffff",
           "background": "#0087af",
+          "foreground": "#ffffff",
           "properties": {
             "display_host": false
-          }
+          },
+          "style": "plain",
+          "template": " {{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }} ",
+          "type": "session"
         },
         {
-          "type": "path",
-          "style": "diamond",
-          "trailing_diamond": "\uE0B0",
-          "foreground": "#ffffff",
           "background": "#585858",
+          "foreground": "#ffffff",
           "properties": {
-            "prefix": "<#0087af>\uE0B0</> ",
             "folder_separator_icon": " <#808080>\uE0B1</> ",
             "style": "agnoster_full"
-          }
+          },
+          "style": "diamond",
+          "template": "<#0087af>\ue0b0</> {{ .Path }} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "path"
         },
         {
-          "type": "git",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
+          "background": "#ff6a00",
           "foreground": "#ffffff",
-          "background": "#ff6a00"
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+          "type": "git"
         }
-      ]
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "transparent",
+          "foreground": "#585858",
+          "style": "plain",
+          "template": "\ue0b0",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
     }
   ],
-  "final_space": true
+  "final_space": true,
+  "version": 2
 }
