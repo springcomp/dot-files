@@ -15,8 +15,8 @@ function show_powerline_status(){
   if [ -f $USR_HOME/bin/powerline-daemon ]; then
     powerline-daemon -q
   fi
-  if [ -f $POWERLINE_DIR/bindings/bash/powerline.sh ]; then
-    . $POWERLINE_DIR/bindings/bash/powerline.sh
+  if [ -f $POWERLINE_DIR/bindings/shell/powerline.sh ]; then
+    . $POWERLINE_DIR/bindings/shell/powerline.sh
   fi
 }
 

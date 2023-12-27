@@ -37,10 +37,10 @@ cat << EOF >> ~/.bashrc
 export PATH=~/.local/bin:\$PATH
 
 extensions=("powerline" "python" "vim")
-for extension in "${extensions[@]}"
+for extension in "\${extensions[@]}"
 do
-  if [ -f ~/.bashrc_$extension ]; then
-    . ~/.bashrc_$extension
+  if [ -f ~/.bashrc_\$extension ]; then
+    . ~/.bashrc_\$extension
   fi
 done
 
